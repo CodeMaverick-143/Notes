@@ -241,3 +241,37 @@ const target = { a: 1 };
 const source = { b: 2 };
 Object.assign(target, source);
 console.log(target); // { a: 1, b: 2 }
+```
+
+## 19. Trailing Commas
+- Trailing commas in function arguments and array elements.
+```javascript
+const arr = [1, 2, 3, ];
+function foo(a, b,) {
+    console.log(a, b);
+}
+foo(1, 2,);
+```
+- **Advantages:**
+  - Helps in version control by reducing the number of changes when adding new elements or arguments.
+  - Simplifies editing of code, especially when rearranging or appending items.
+
+- **Usage:**
+  - Works in arrays, objects, and function parameters.
+  - It is ignored by the interpreter, so it does not affect the program's execution.
+
+```javascript
+const obj = {
+    key1: 'value1',
+    key2: 'value2',
+}; // No error, the trailing comma is allowed
+
+const numbers = [1, 2, 3, ]; // Trailing comma in arrays
+function example(a, b, c,) {
+    console.log(a, b, c);
+} // Trailing comma in function parameters
+```
+
+- **Important:**
+  - Ensure compatibility with older environments, as some might not support trailing commas in function arguments.
+
