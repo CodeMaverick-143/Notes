@@ -64,12 +64,17 @@ Django is **somewhat opinionated**. This means it has suggestions for how things
 
 ### 1. URLs (url.py)
 A URL mapper is used to match HTTP requests to the correct view function.
+```python
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('book/<int:id>/', views.book_detail, name='book_detail'),
+    path('catalog/', include('catalog.urls')),
+]
+```
 
-
-
-2. Views (views.py)
+### 2. Views (views.py)
 A view handles an HTTP request and returns a response. It connects to models to get data and uses templates to format the response.
-
+```
 Example:
 
 python
@@ -79,9 +84,10 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('Hello from Django!')
-3. Models (models.py)
+```
+### 3. Models (models.py)
 A model defines the structure of the data in the database.
-
+```
 Example:
 
 python
@@ -92,10 +98,11 @@ from django.db import models
 class Team(models.Model):
     team_name = models.CharField(max_length=40)
     team_level = models.CharField(max_length=3)
-4. Templates (HTML files)
+```
+### 4. Templates (HTML files)
 Templates define the structure of web pages with placeholders for dynamic data.
 
-Example:
+```Example:
 
 html
 Copy
@@ -118,9 +125,11 @@ Edit
   {% endif %}
 </body>
 </html>
-What Else Can You Do With Django?
-Forms: Easily handle user input through forms.
-User Authentication: Manage users and permissions securely.
-Caching: Speed up your website by caching content.
-Admin Site: Django comes with a built-in admin site to manage your website's data.
-Django provides everything you need to build a robust and secure web application. The structure and features it offers will help you write code that's easy to maintain and scale. Happy coding with Django! 🎉
+```
+## What Else Can You Do With Django?
+- Forms: Easily handle user input through forms.
+- User Authentication: Manage users and permissions securely.
+- Caching: Speed up your website by caching content.
+- Admin Site: Django comes with a built-in admin site to manage your website's data.
+
+#### Django provides everything you need to build a robust and secure web application. The structure and features it offers will help you write code that's easy to maintain and scale. Happy coding with Django! 🎉
