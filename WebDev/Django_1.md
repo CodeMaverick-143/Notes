@@ -74,8 +74,7 @@ urlpatterns = [
 
 ### 2. Views (views.py)
 A view handles an HTTP request and returns a response. It connects to models to get data and uses templates to format the response.
-```
-Example:
+```Example:
 from django.http import HttpResponse
 
 def index(request):
@@ -83,8 +82,7 @@ def index(request):
 ```
 ### 3. Models (models.py)
 A model defines the structure of the data in the database.
-```
-Example:
+```Example:
 from django.db import models
 
 class Team(models.Model):
