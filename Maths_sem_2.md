@@ -11,7 +11,7 @@ Data is a collection of facts, numbers, words, measurements, or observations use
 ## **2. Types of Data**  
 Data can be broadly classified into **Numerical (Quantitative) Data** and **Categorical (Qualitative) Data**.
 
----
+-----
 
 ### **A. Numerical (Quantitative) Data**
 Numerical data represents measurable quantities and can be expressed in numbers. This data is further divided into:  
